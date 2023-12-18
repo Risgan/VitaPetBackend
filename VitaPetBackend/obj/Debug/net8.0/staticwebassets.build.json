@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LIigf5xdcWmsoi1HBNJW85QCIIbmcjY0y530CBMh6RQ=",
+  "Source": "VitaPetBackend",
+  "BasePath": "_content/VitaPetBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,6 @@
+# @VitaPetBackend_HostAddress = http://localhost:5192
+
+# GET {{VitaPetBackend_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+# ###
