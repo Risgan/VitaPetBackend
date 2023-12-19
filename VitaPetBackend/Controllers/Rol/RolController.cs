@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VitaPetBackend.Dto.Rol;
 using VitaPetBackend.Repositorios.Rol;
+using VitaPetBackend.Services.Rol;
 
 namespace VitaPetBackend.Controllers.Rol
 {
@@ -8,11 +9,11 @@ namespace VitaPetBackend.Controllers.Rol
     [Route("api/[controller]")]
     public class RolController : Controller
     {
-        private readonly IRolRepository _repository;
+        private readonly IRolService _rolService;
 
-        public RolController(IRolRepository rolRepository)
+        public RolController(IRolService rolService)
         {
-            _repository = rolRepository;
+            _rolService = rolService;
         }
 
         [HttpGet]
@@ -20,7 +21,7 @@ namespace VitaPetBackend.Controllers.Rol
         {
             try
             {
-                return Ok(await _repository.GetAll());
+                return Ok(await _rolService.GetAll());
             }
             catch (Exception ex)
             {
@@ -37,7 +38,7 @@ namespace VitaPetBackend.Controllers.Rol
             {
                 if (id != 0)
                 {
-                    return Ok(await _repository.GetById(id));
+                    return Ok(await _rolService.GetById(id));
 
                 }
                 else
@@ -59,7 +60,7 @@ namespace VitaPetBackend.Controllers.Rol
         {
             try
             {
-                return Ok(await _repository.Create(data));
+                return Ok(await _rolService.Create(data));
             }
             catch (Exception ex)
             {
@@ -73,7 +74,7 @@ namespace VitaPetBackend.Controllers.Rol
         {
             try
             {
-                return Ok(await _repository.Update(id, data));
+                return Ok(await _rolService.Update(id, data));
             }
             catch (Exception ex)
             {
@@ -87,7 +88,7 @@ namespace VitaPetBackend.Controllers.Rol
         {
             try
             {
-                return Ok(await _repository.Delete(id));
+                return Ok(await _rolService.Delete(id));
             }
             catch (Exception ex)
             {

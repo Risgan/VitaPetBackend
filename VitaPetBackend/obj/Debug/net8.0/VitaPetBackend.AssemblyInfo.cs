@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VitaPetBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c5c1f052d58b22f95c25a1eef9f78b0fb3868a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("VitaPetBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VitaPetBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

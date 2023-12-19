@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VitaPetBackend.Dto.TipoDocumento;
 using VitaPetBackend.Repositorios.TipoDocumento;
+using VitaPetBackend.Services.TipoDocumento;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VitaPetBackend.Controllers.TipoDocumento
@@ -9,10 +10,10 @@ namespace VitaPetBackend.Controllers.TipoDocumento
     [Route("api/[controller]")]
     public class TipoDocumentoController : Controller
     {
-        private readonly ITipoDocumentoRepository _tipoDocumentoRespository;
-        public TipoDocumentoController(ITipoDocumentoRepository tipoDocumentoRespository)
+        private readonly ITipoDocumentoService _tipoDocumentoService;
+        public TipoDocumentoController(ITipoDocumentoService tipoDocumentoService)
         {
-            _tipoDocumentoRespository = tipoDocumentoRespository;
+            _tipoDocumentoService = tipoDocumentoService;
         }
 
         [HttpGet]
@@ -20,7 +21,7 @@ namespace VitaPetBackend.Controllers.TipoDocumento
         {
             try
             {
-                return Ok(await _tipoDocumentoRespository.GetAll());
+                return Ok(await _tipoDocumentoService.GetAll());
             }
             catch (Exception ex)
             {
@@ -37,7 +38,7 @@ namespace VitaPetBackend.Controllers.TipoDocumento
             {
                 if (id != 0)
                 {
-                    return Ok(await _tipoDocumentoRespository.GetById(id));
+                    return Ok(await _tipoDocumentoService.GetById(id));
 
                 }
                 else
@@ -59,7 +60,7 @@ namespace VitaPetBackend.Controllers.TipoDocumento
         {
             try
             {
-                return Ok(await _tipoDocumentoRespository.Create(data));
+                return Ok(await _tipoDocumentoService.Create(data));
             }
             catch (Exception ex)
             {
@@ -73,7 +74,7 @@ namespace VitaPetBackend.Controllers.TipoDocumento
         {
             try
             {
-                return Ok(await _tipoDocumentoRespository.Update(id, data));
+                return Ok(await _tipoDocumentoService.Update(id, data));
             }
             catch (Exception ex)
             {
@@ -87,7 +88,7 @@ namespace VitaPetBackend.Controllers.TipoDocumento
         {
             try
             {
-                return Ok(await _tipoDocumentoRespository.Delete(id));
+                return Ok(await _tipoDocumentoService.Delete(id));
             }
             catch (Exception ex)
             {
