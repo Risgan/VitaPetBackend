@@ -3329,11 +3329,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\johnr\\Documents\\Documentos\\ECCI\\Tesis\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
+      "projectUniqueName": "D:\\Documentos\\ECCI\\Tesis\\VitaPet_Backend\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
       "projectName": "VitaPetBackend",
-      "projectPath": "C:\\Users\\johnr\\Documents\\Documentos\\ECCI\\Tesis\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
+      "projectPath": "D:\\Documentos\\ECCI\\Tesis\\VitaPet_Backend\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
       "packagesPath": "C:\\Users\\johnr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\johnr\\Documents\\Documentos\\ECCI\\Tesis\\VitaPetBackend\\VitaPetBackend\\obj\\",
+      "outputPath": "D:\\Documentos\\ECCI\\Tesis\\VitaPet_Backend\\VitaPetBackend\\VitaPetBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

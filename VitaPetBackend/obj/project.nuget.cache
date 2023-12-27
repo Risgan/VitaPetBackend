@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SIhZFN1jK5UEK+73N6dSyHgn4vD191vt/OY8Vt4oTvbV6hTL+YP6jvew0nlrULwVRWkuBHdmgsLc+Ow496jJSg==",
+  "dgSpecHash": "cmACdDJVkCyb4KB3fHLKlKVi3neFNDlBA4JKXUajgB0GRdqaI96Ugiqn7ZpKV78xMVqrPTq3mSArypZSfc26Qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\johnr\\Documents\\Documentos\\ECCI\\Tesis\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
+  "projectFilePath": "D:\\Documentos\\ECCI\\Tesis\\VitaPet_Backend\\VitaPetBackend\\VitaPetBackend\\VitaPetBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\johnr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\johnr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

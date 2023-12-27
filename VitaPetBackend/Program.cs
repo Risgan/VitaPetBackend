@@ -4,10 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using VitaPetBackend.DataAccess;
-using VitaPetBackend.Repositorios.Rol;
 using VitaPetBackend.Repositorios.TipoDocumento;
 using VitaPetBackend.Repositorios.Usuario;
-using VitaPetBackend.Services.Rol;
 using VitaPetBackend.Services.TipoDocumento;
 using VitaPetBackend.Services.Usuario;
 
@@ -81,11 +79,9 @@ builder.Services.AddDbContext<DbVitaPetContext>(options =>
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped< ITipoDocumentoService, TipoDocumentoService>();
-//builder.Services.AddScoped< IRolService, RolService>();
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ITipoDocumentoRepository, TipoDocumentoRepository>();
-//builder.Services.AddScoped<IRolRepository, RolRepository>();
 
 
 

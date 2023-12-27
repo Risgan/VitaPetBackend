@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VitaPetBackend.Repositorios.Usuario;
-using VitaPetBackend.Services.Usuario;
 
 namespace VitaPetBackend.Controllers.Usuario
 {
@@ -9,11 +8,11 @@ namespace VitaPetBackend.Controllers.Usuario
     [Route("api/[controller]")]
     public class UsuarioController : Controller
     {
-        private readonly IUsuarioService _usuarioService;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public UsuarioController(IUsuarioService usuarioService)
+        public UsuarioController(IUsuarioRepository usuarioRepository)
         {
-            _usuarioService = usuarioService;
+            _usuarioRepository = usuarioRepository;
         }
 
         [HttpGet]
@@ -21,7 +20,7 @@ namespace VitaPetBackend.Controllers.Usuario
         {
             try
             {
-                return Ok(await _usuarioService.GetAll());
+                return Ok(await _usuarioRepository.GetAll());
             }
             catch (Exception ex)
             {
@@ -38,7 +37,7 @@ namespace VitaPetBackend.Controllers.Usuario
             {
                 if (id != 0)
                 {
-                    return Ok(await _usuarioService.GetById(id));
+                    return Ok(await _usuarioRepository.GetById(id));
 
                 }
                 else

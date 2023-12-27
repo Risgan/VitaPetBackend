@@ -1,45 +1,16 @@
 ﻿using VitaPetBackend.DataAccess;
-using VitaPetBackend.Dto.TipoDocumento;
-using VitaPetBackend.Mappers.TipoDocumento;
 using VitaPetBackend.Models.TipoDocumento;
 using VitaPetBackend.Repositorios.Repository;
-using VitaPetBackend.Repositorios.TipoDocumento;
 
 namespace VitaPetBackend.Services.TipoDocumento
 {
-    public class TipoDocumentoService :  ITipoDocumentoService
+    public class TipoDocumentoService : GenericRepository<TipoDocumentoModel>, ITipoDocumentoService
     {
-        private readonly ITipoDocumentoRepository _tipoDocumentoRepository;
+        private readonly DbVitaPetContext _context;
 
-        public TipoDocumentoService(ITipoDocumentoRepository tipoDocumentoRepository)
+        public TipoDocumentoService(DbVitaPetContext context) : base(context)
         {
-            _tipoDocumentoRepository = tipoDocumentoRepository;
+            _context = context;
         }
-
-        public Task<bool> Create(TipoDocumentoCreateDto tipoDocumento)
-        {
-            return _tipoDocumentoRepository.Add(TipoDocumentoMapper.MapCreate(tipoDocumento));
-        }
-
-        public Task<bool> Delete(int id)
-        {
-            return _tipoDocumentoRepository.Delete(id);
-        }
-
-        public async Task<IEnumerable<TipoDocumentoDto>> GetAll()
-        {
-            return TipoDocumentoMapper.MapResponse(await _tipoDocumentoRepository.GetAll());
-        }
-
-        public async Task<TipoDocumentoDto> GetById(int id)
-        {
-            return TipoDocumentoMapper.MapResponse(await _tipoDocumentoRepository.Get(id));
-        }
-
-        public Task<bool> Update(int id, TipoDocumentoDto tipoDocumento)
-        {
-            return _tipoDocumentoRepository.Update(id, TipoDocumentoMapper.MapResponse(tipoDocumento));
-        }
-
     }
 }
